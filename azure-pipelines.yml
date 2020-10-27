@@ -23,7 +23,7 @@ stages:
     - task: Docker@2
       inputs:
         containerRegistry: 'GanDockerHub'
-        repository: 'binarythistle/weatherapi'
+        repository: 'vgshettigar/weatherapi'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         tags: |
