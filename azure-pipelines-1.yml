@@ -34,7 +34,7 @@ stages:
   - job: Provision
     displayName: 'Provisioning container instance'
     pool:
-      vmImage: 'hashicorp/terraform:0.13.5'
+      vmImage: 'ubuntu-latest'
     variables:
     - group: TerraformVarGroup
     steps: 
