@@ -16,12 +16,6 @@ variable "imagebuild" {
   description = "Latest Image Build"
 }
 
-
-resource "azurerm_resource_group" "tf_test" {
-  name = "tfmainrg"
-  location = "US East"
-}
-
 resource "azurerm_container_group" "tfcg_test" {
   name                      = "weatherapi"
   location                  = azurerm_resource_group.tf_test.location
