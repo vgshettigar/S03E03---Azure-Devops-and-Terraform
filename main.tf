@@ -29,7 +29,7 @@ resource "azurerm_container_group" "tfcg_test" {
   os_type             = "Linux"
 
   container {
-      name            = "weatherapi"
+      name            = "ganweatherapi"
       image           = "vgshettigar/weatherapi:latest"
         cpu             = "1"
         memory          = "1"
