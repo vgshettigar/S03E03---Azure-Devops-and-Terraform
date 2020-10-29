@@ -10,6 +10,11 @@ terraform {
         key                  = "terraform.tfstate"
     }
 }
+variable "imagebuild" {
+  type        = string
+  description = "Latest Image Build"
+  default = 44
+}
 
 resource "azurerm_resource_group" "resource_gp"{
     name="terraform_cont_resgrp"
@@ -30,7 +35,7 @@ resource "azurerm_container_group" "tfcg_test" {
 
   container {
       name            = "ganweatherapi"
-      image           = "vgshettigar/weatherapi:latest"
+      image           = "vgshettigar/weatherapi:${var.imagebuild}"
         cpu             = "1"
         memory          = "1"
 
